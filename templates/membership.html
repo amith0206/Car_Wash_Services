@@ -1,0 +1,125 @@
+{% extends 'base_user_interface.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<div class="membership-header-block">
+    <h1>Membership</h1>
+</div>
+
+<div class="membership-block">
+    <div class="membership-offers">
+        <div class="offer">
+            <div class="offer-header">
+                <h2>Chauffeur Card</h2>
+            </div>
+            <div class="offer-body">
+                <p><ul>
+                    <li>Description: The Chauffeur Card membership offers premium benefits for customers looking for top-notch service and convenience. Enjoy exclusive discounts, priority booking, and personalized customer support.</li>
+                    <li>Benefits: Priority booking for appointments, exclusive discounts on additional services.
+                    </li>
+                    <li>
+                        Price: ₹5,000 per month. (Minimum commitment 12 months) Special Offer: 1 month free when you buy 12 months, ₹60,000.
+                    </li>
+                </ul></p>
+            </div>
+            <a href="http://127.0.0.1:5000/reservation" class="order-button">Order</a>
+        </div>
+        <div class="offer">
+            <div class="offer-header">
+                <h2>Black Cab Card</h2>
+            </div>
+            <div class="offer-body">
+                <p><ul>
+                    <li>Description: The Black Cab Card membership is tailored for customers seeking reliable transportation solutions with added benefits. Benefit from discounted rates, priority service, and dedicated customer assistance.</li>
+                    <li>Benefits: Discounted rates on cab services, priority booking and service.</li>
+                    <li>Price: ₹3,000 per month. (Minimum commitment 12 months). Special Offer: 1 month free when you buy 12 months in advance, ₹36,000.</li>
+                </ul></p>
+            </div>
+            <a href="http://127.0.0.1:5000/reservation" class="order-button">Order</a>
+            </div>
+        <div class="offer">
+            <div class="offer-header">
+                <h2>Economy Card</h2>
+            </div>
+            <div class="offer-body">
+                <p><ul>
+                    <li>Description: The Economy Card membership offers budget-friendly options for customers who require basic services with cost-effective solutions.</li>
+                    <li>Benefits: Monthly price per car: ₹1,500, Then pay only ₹200/₹300 each time you visit.</li>
+                    <li>Price: ₹1,500 per month.</li>
+                </ul></p>
+            </div>
+            <a href="http://127.0.0.1:5000/reservation" class="order-button">Order</a>
+        </div>
+        <div class="offer">
+            <div class="offer-header">
+                <h2>Platinum Card</h2>
+            </div>
+            <div class="offer-body">
+                <p><ul>
+                    <li>Description: The Platinum Card membership provides luxury services and exclusive privileges for discerning customers. Enjoy premium benefits, personalized assistance, and complimentary services.</li>
+                    <li>Benefits: Exclusive access to premium services, personalized assistance, and complimentary benefits.</li>
+                    <li>Price: ₹10,000 per month. (Minimum commitment 12 months) Special Offer: One month free when you buy 12 months in advance, ₹120,000.</li>
+                </ul></p>
+            </div>
+            <a href="http://127.0.0.1:5000/reservation" class="order-button">Order</a>            
+        </div>
+        <div class="offer">
+            <div class="offer-header">
+                <h2>Club Card</h2>
+            </div>
+            <div class="offer-body">
+                <p><ul>
+                    <li>Description: The Club Card membership offers rewards and perks for loyal customers. Accumulate points, enjoy discounts, and receive complimentary services after a certain number of visits.</li>
+                    <li>Benefits: Loyalty rewards, discounts, and complimentary services after 12 visits.</li>
+                    <li>Price: ₹2,000 per month.</li>
+                </ul></p>
+            </div>
+            <a href="http://127.0.0.1:5000/reservation" class="order-button">Order</a>
+            
+        </div>
+
+    </div>
+    <div class="membership-form">
+    </div>
+
+    <div class="order-header-block">
+        <h1>Order Form</h1>
+    </div>
+    <div class="order-form-block">
+        <h3>Your Details:</h3>
+        <form action="" method="POST">
+            <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+            <h6>Address</h6>
+            <input type="text" id="address" name="address" placeholder="Address" required>
+            <input type="text" id="city" name="city" placeholder="City" required>
+            <input type="text" id="postalcode" name="postalcod" placeholder="Postal Code" required>
+            <input type="text" id="country" name="country" placeholder="Country" required>
+            <select name="gender" id="gender">
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
+            <h3>Membership Options</h3>
+            <h5>Choose an option</h5>
+            <select name="offertype" id="offertype">
+                <option value="Chauffeur Card monthly">Chauffeur Card monthly</option>
+                <option value="Chauffeur Card yearly">Chauffeur Card yearly</option>
+                <option value="Black Cab Card monthly">Black Cab Card monthly</option>
+                <option value="Black Cab Card yearly">Black Cab Card yearly</option>
+                <option value="Economy Card monthly">Economy Card monthly</option>
+                <option value="Economy Card yearly">Economy Card yearly</option>
+                <option value="Platinum Card monthly">Platinum Card monthly</option>
+                <option value="Platinum Card yearly">Platinum Card yearly</option>
+                <option value="Club Card monthly">Club Card monthly</option>
+                <option value="Club Card yearly">Club Card yearly</option>
+            </select>
+            <input type="submit" value="Order Now">
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

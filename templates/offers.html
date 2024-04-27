@@ -1,0 +1,42 @@
+{% extends 'base_user_interface.html' %}
+
+{% block title %}Offers{% endblock %}
+
+{% block content %}
+
+<div class="offers">
+    <div class="offer1">
+        <h2>Special Offers at SuperCarWash</h2>
+        <p>Enjoy our special offers at SuperCarWash! Get a deluxe car wash and interior detailing for the price of a standard wash. Treat your car to the ultimate cleaning experience without breaking the bank.</p>
+    </div>
+    <div class="offer2">
+        <h2>Advertising</h2>
+        <p>Are you looking to promote your business? Advertise with us! Reach a wide audience of car owners and enthusiasts by placing your advertisement at our car wash facilities. Contact us today to learn about our advertising packages.</p>
+    </div>
+    <div class="offer3">
+        <h3>Disinfection Clean and Wipe Down Service</h3>
+        <p>Protect yourself and your loved ones with our disinfection clean and wipe down service. Our trained professionals use industry-leading disinfectants to sanitize your vehicle's interior, ensuring a safe and hygienic environment for all passengers.</p>
+    </div>
+    <div class="offer4">
+        <h4>Senior Wednesdays</h4>
+        <p>Attention seniors! Enjoy exclusive discounts every Wednesday at SuperCarWash. Treat yourself to a premium car wash experience at a discounted rate. Visit us on Senior Wednesdays and leave with a sparkling clean car!</p>
+    </div>
+</div>
+
+<div class="newsletter">
+    <form action="" method="POST" name="contactform">
+        <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+        <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+        <input type="text" name="email" id="email" placeholder="Email" required>
+        <input type="submit" value="Subscribe" onclick="ValidateEmail(document.contactform.email)">
+    </form>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+</div>
+
+{% endblock %}
